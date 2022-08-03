@@ -4,7 +4,7 @@
   height: 200vh;
 }
 
-.container {
+.custom-container {
   /* hide fixed overflow contents */
   clip: rect(0, auto, auto, 0);
 
