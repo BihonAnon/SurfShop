@@ -35,10 +35,14 @@ const userSchema = new Schema({
     Comments: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Comments',
+        ref: 'Comment',
       },
     ],
-    orders: [Order.schema]
+    orders: [
+      {
+      type: Schema.Types.ObjectId,
+      ref: 'Order',
+    }],
 });
 
 // set up pre-save middleware to create password
