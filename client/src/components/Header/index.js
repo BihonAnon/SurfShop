@@ -1,28 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import Auth from '../../utils/auth';
-
-const Header = () => {
-  console.log("works");
-  };
+export default function Header() {
   return (
-    <header>
-
-        <div class="container container_solid">
-          <div class="title_wrapper">
-            <h1>The Great Outdoors</h1>
-          </div>
-        </div>
+    <div>
+      HEADER
+      <p>a;ldjkf;asldfasdfklasd;flkalskdfj;asdf</p>
+      <p>a;ldjkf;asldfasdfklasd;flkalskdfj;asdf</p>
+      <p>a;ldjkf;asldfasdfklasd;flkalskdfj;asdf</p>
+      <p>a;ldjkf;asldfasdfklasd;flkalskdfj;asdf</p>
+      <p>a;ldjkf;asldfasdfklasd;flkalskdfj;asdf</p>
       
-        <div class="container container_image" aria-hidden="true">
-          <div class="title_wrapper">
-            <h1>Begins here</h1>
-          </div>
-        </div>
-      
-      </header>
+    </div>
   );
-};
-
-export default Header;
+}

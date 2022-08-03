@@ -1,6 +1,6 @@
-
-
-function titleAnimation() {
+import React from 'react';
+import './style.css';
+export default function Home() {
   return (
     <div>
       <div class="container container_solid">
@@ -17,4 +17,3 @@ function titleAnimation() {
     </div>
   );
 }
-export default {titleAnimation};
