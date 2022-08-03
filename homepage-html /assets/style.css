@@ -71,7 +71,7 @@ header {
 .container_image {
   /* Grab a free image from unsplash */
   background: url(./images/sea-g2d4873d4f_1920.jpg);
-  background-size:100vw auto;
+  background-size: 100vw auto;
   background-position: center;
   background-attachment: fixed;
   
