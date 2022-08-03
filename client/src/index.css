@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 
-header {
+.customHeader {
   height: 200vh;
 }
 
-.container {
+.customContainer {
   /* hide fixed overflow contents */
   clip: rect(0, auto, auto, 0);
 

@@ -1,6 +1,8 @@
 import React from 'react';
+import {Nav, Navbar, Container} from 'react-bootstrap';
 
-export default function Header() {
+
+function Header() {
   return (
       <div className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
@@ -28,3 +30,5 @@ export default function Header() {
       </div>
   );
 }
+
+export default Header;
