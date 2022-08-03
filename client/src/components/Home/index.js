@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 export default function Home() {
   return (
-    <div>
+    <div className='customHeader'>
       <div class="container container_solid">
         <div class="title_wrapper">
           <h1>The Great Outdoors</h1>
