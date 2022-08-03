@@ -38,23 +38,23 @@ export default function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <div>
-            <Header />
-          <Routes>
-          <Route
-              path="/"
-              element={<Home />}
-            />
+            <Header></Header>
+            <Routes>
+              <Route
+                path="/"
+                element={<Home />}
+              />
 
-            <Route
-              path="/login"
-              element={<Login />}
-            />
-            <Route
-              path="/shop"
-              element={<Shop />}
-            />
-          </Routes>
-          <Footer />
+              <Route
+                path="/login"
+                element={<Login />}
+              />
+              <Route
+                path="/shop"
+                element={<Shop />}
+              />
+            </Routes>
+            <Footer />
           </div>
         </div>
       </Router>
