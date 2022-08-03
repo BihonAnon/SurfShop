@@ -31,6 +31,12 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
+    Comments: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Comments',
+      },
+    ],
     orders: [Order.schema]
 });
 
