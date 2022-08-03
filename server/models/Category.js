@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const Product = require('./Product');
+
 const { Schema } = mongoose;
 
 const categorySchema = new Schema({
@@ -7,7 +9,13 @@ const categorySchema = new Schema({
     type: String,
     required: true,
     trim: true
-  }
+  },
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Product'
+    }
+  ]
 });
 
 const Category = mongoose.model('Category', categorySchema);
