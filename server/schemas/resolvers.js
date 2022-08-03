@@ -16,12 +16,12 @@ const resolvers = {
             const params = username ? { username } : {};
             return Comment.find(params).sort({ createdAt: 1 });
           },
-          comment: async (parent, { thoughtId }) => {
+          comment: async (parent, { commentId }) => {
             return Comment.findOne({ _id: commentId });
           },
         me: async (parent, args, context) => {
             if (context.user) {
-                return User.findOne({ _id: context.user._id }).populate('thoughts');
+                return User.findOne({ _id: context.user._id }).populate('comments');
             }
             throw new AuthenticationError('You need to be logged in!');
         },
