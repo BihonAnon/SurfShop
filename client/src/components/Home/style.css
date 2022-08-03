@@ -37,7 +37,7 @@ header {
   margin: auto;
   width: 100%;
   /* center the text wrapper vertically */
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -54,7 +54,7 @@ header {
 
 .container_solid .title_wrapper h1 {
   /* the text background */
-  background: url(./images/sea-g2d4873d4f_1920.jpg);
+  background: url(../../assets/images/backgroundSurf.jpg);
   background-size: 100vw auto;
   background-position: center;
   
@@ -70,10 +70,11 @@ header {
 
 .container_image {
   /* Grab a free image from unsplash */
-  background: url(./images/sea-g2d4873d4f_1920.jpg);
+  background: url(../../assets/images/backgroundSurf.jpg);
   background-size:100vw auto;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   
   /* position the second container below the first container */
   top: 100vh;
