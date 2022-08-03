@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -27,14 +27,10 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+export default function App() {
     return (
         <ApolloProvider client={client}>
-            <Router>
-
-
-
-            </Router>
+          <h1>LandDeDrois</h1>
         </ApolloProvider>
     )
     
