@@ -5,5 +5,7 @@ import Cart from "../components/Cart";
 
 
 const Home = () => {
-    
+    return{
+      
+    }
 }

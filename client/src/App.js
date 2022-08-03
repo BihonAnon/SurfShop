@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import { titleAnimation } from './components/titleAnimation/index'
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -31,6 +31,9 @@ export default function App() {
     return (
         <ApolloProvider client={client}>
           <h1>LandDeDrois</h1>
+          <titleAnimation>
+
+          </titleAnimation>
         </ApolloProvider>
     )
     
