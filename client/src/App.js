@@ -38,13 +38,15 @@ export default function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <div>
-            <Header></Header>
             <Routes>
               <Route
                 path="/"
                 element={<Home />}
               />
-
+              <Route
+                path="/Head"
+                element={<Header />}
+              />
               <Route
                 path="/login"
                 element={<Login />}
@@ -54,7 +56,6 @@ export default function App() {
                 element={<Shop />}
               />
             </Routes>
-            <Footer />
           </div>
         </div>
       </Router>
