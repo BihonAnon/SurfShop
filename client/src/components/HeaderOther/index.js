@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './style.css';
 import { Link } from 'react-router-dom';
 
-function ColorSchemesExample() {
+function HeaderOther() {
   return (
     <>
       <Navbar className="fixme" bg="light" variant="light">
@@ -21,4 +21,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default HeaderOther;
