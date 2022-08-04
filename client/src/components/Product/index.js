@@ -1,7 +1,6 @@
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { Button, ListGroup, Card } from 'react-bootstrap';
 
-export default function Product({product_prop}) {
+export default function Product({product_prop}) { //onclick={addProductItem}
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
@@ -18,7 +17,7 @@ export default function Product({product_prop}) {
         <ListGroup.Item>{product_prop.price}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Add To Cart</Card.Link>
+        <Button  variant="dark">Dark</Button> <Button variant="link">Link</Button>
       </Card.Body>
     </Card>
   );
