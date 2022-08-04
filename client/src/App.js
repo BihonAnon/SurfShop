@@ -45,7 +45,7 @@ export default function App() {
               />
 
               <Route
-                path="/Head"
+                path="/header"
                 element={<Header />}
               />
               <Route
