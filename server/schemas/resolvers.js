@@ -110,11 +110,11 @@ const resolvers = {
           //   return await Product.findByIdAndUpdate(_id, { $inc: { stock: decrement } }, { new: true });
           // },
 
-          // addToCart: async ()
+          // /////addToCart: async ()
 
-          // removeFromCart: async ()
+          // ..removeFromCart: async ()
 
-          // checkout: async ()
+          ////// checkout: async ()
     }
 }
 
