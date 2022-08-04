@@ -50,6 +50,18 @@ const resolvers = {
 
             return { token, user };
         },
+
+        addComment: async (parent, { commentText }, context) => {
+            if (context.user) {
+              const comment = await Comment.create({
+                commentText,
+                commentAuthor: context.user.username,
+              });
+            
+              return comment;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+          },
     }
 }
 
