@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function OffCanvasExample({ name, ...props }) {
+export default function Login({ name, ...props }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -26,14 +26,14 @@ function OffCanvasExample({ name, ...props }) {
   );
 }
 
-function Example() {
-  return (
-    <>
-      {['start', 'end', 'top', 'bottom'].map((placement, idx) => (
-        <OffCanvasExample key={idx} placement={placement} name={placement} />
-      ))}
-    </>
-  );
-}
+// export default function Example() {
+//   return (
+//     <>
+//       {['start', 'end', 'top', 'bottom'].map((placement, idx) => (
+//         <OffCanvasExample key={idx} placement={placement} name={placement} />
+//       ))}
+//     </>
+//   );
+// }
 
-render(<Example />);
+// render(<Example />);
