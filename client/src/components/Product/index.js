@@ -18,8 +18,7 @@ export default function Product({product_prop}) {
         <ListGroup.Item>{product_prop.price}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#">Add To Cart</Card.Link>
       </Card.Body>
     </Card>
   );

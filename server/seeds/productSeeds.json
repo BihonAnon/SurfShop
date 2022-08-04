@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Wooden Long Board",
+    "description": "A wooden long board",
+    "stock": "15",
+    "price": "200.00",
+    "image": "https://www.fillmurray.com/400/400"
+  },
+  {
+    "name": "Fiberglass Long Board",
+    "description": "A Fiberglass long board",
+    "stock": "20",
+    "price": "400.00",
+    "image": "https://www.fillmurray.com/400/400"
+  },
+  {
+    "name": "Foamy Long Board",
+    "description": "A Foamy long board",
+    "stock": "200",
+    "price": "100.00",
+    "image": "https://www.fillmurray.com/400/400"
+  },
+  {
+    "name": "Wooden Short Board",
+    "description": "A wooden Short Board",
+    "stock": "15",
+    "price": "200.00",
+    "image": "https://www.fillmurray.com/400/400"
+  },
+  {
+    "name": "Fiberglass Short Board",
+    "description": "A Fiberglass Short Board",
+    "stock": "20",
+    "price": "400.00",
+    "image": "https://www.fillmurray.com/400/400"
+  },
+  {
+    "name": "Foamy Short Board",
+    "description": "A Foamy Short Board",
+    "stock": "200",
+    "price": "100.00",
+    "image": "https://www.fillmurray.com/400/400"
+  }
+]
