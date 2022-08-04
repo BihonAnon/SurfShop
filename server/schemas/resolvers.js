@@ -6,6 +6,27 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        categories: async () => {
+            return await Category.find();
+          },
+          products: async (parent, { category, name }) => {
+            const params = {};
+      
+            if (category) {
+              params.category = category;
+            }
+      
+            if (name) {
+              params.name = {
+                $regex: name
+              };
+            }
+      
+            return await Product.find(params).populate('category');
+          },
+          product: async (parent, { _id }) => {
+            return await Product.findById(_id).populate('category');
+          },
         users: async () => {
             return User.find().populate('comments');
           },
@@ -61,6 +82,12 @@ const resolvers = {
               return comment;
             }
             throw new AuthenticationError('You need to be logged in!');
+          },
+
+          addProduct: async (parent, args) => {
+            const product = await Product.create(args);
+      
+            return { product };
           },
     }
 }
