@@ -43,6 +43,7 @@ export default function App() {
                 path="/"
                 element={<Home />}
               />
+
               <Route
                 path="/Head"
                 element={<Header />}
