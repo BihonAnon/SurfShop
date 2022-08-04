@@ -8,12 +8,14 @@ export default function Product({product_prop}) {
       <Card.Body>
         <Card.Title>{product_prop.name}</Card.Title>
         <Card.Text>
+        {product_prop.image}
         {product_prop.description}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
+        <ListGroup.Item>{product_prop.category}</ListGroup.Item>
+        <ListGroup.Item>{product_prop.stock}</ListGroup.Item>
         <ListGroup.Item>{product_prop.price}</ListGroup.Item>
-        <ListGroup.Item>{product_prop.keysearch}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Card.Link href="#">Card Link</Card.Link>
