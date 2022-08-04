@@ -6,6 +6,7 @@ export default function Shop() {
   return (
     <div>
       <Header />
+      <Product product_prop={products}/>
     </div>
   );
 }
