@@ -11,7 +11,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Login from './components/Login'
 import Shop from './components/Shop'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
