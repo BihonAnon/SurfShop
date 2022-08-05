@@ -58,8 +58,8 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (parent, { username, email, password }) => {
-            const user = await User.create({ username, email, password });
+        addUser: async (parent, { username, firstName, lastName, email, password }) => {
+            const user = await User.create({ username,firstName, lastName, email, password });
             const token = signToken(user);
             return { token, user };
         },
@@ -103,9 +103,9 @@ const resolvers = {
         addToCart: async (parent, { products }, context) => {
             console.log(context);
             if (context.user) {
-              const order = new Order({ products });
+              const order = Order.create({ products });
       
-              await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+              await User.findByIdAndUpdate(context.user._id, { $addToSet: { orders: order._id } });
       
               return order;
             }
