@@ -22,8 +22,6 @@ const typeDefs = gql`
       commentText: String
       commentAuthor: String
       createdAt: String
-
-
   }
 
   type Order {
@@ -39,7 +37,7 @@ const typeDefs = gql`
     lastName: String
     email: String
     password: String
-    comments: [Comment]
+    # comments: [Comment]
     orders: [Order]
   }
 
@@ -53,7 +51,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    user: User
+    user: [User]
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
@@ -68,7 +66,6 @@ const typeDefs = gql`
     removeFromCart(products: [ID]!): Order
     # updateUser(username: String, firstName: String, lastName: String, email: String, password: String): User
     # updateProduct(_id: ID!, quantity: Int!): Product
-   
   }
 `;
 

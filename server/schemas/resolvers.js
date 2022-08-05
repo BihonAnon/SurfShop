@@ -7,8 +7,8 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
       
-        user: async (parent, { username }) => {
-            return User.findOne({ username }).populate('comments');
+        user: async () => {
+            return await User.find();
         },
         categories: async () => {
             return await Category.find();
