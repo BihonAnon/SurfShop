@@ -6,18 +6,22 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+      
+        user: async (parent, { username }) => {
+            return User.findOne({ username }).populate('comments');
+        },
         categories: async () => {
             return await Category.find();
-          },
-          products: async (parent) => {
+        },
+        products: async (parent) => {
             return await Product.find({}).populate('category');
-          },
+        },
 
-          product: async (parent, { _id }) => {
+        product: async (parent, { _id }) => {
             return await Product.findById(_id).populate('category');
-          },
+        },
 
-          order: async (parent, { _id }, context) => {
+        order: async (parent, { _id }, context) => {
             if (context.user) {
               const user = await User.findById(context.user._id).populate({
                 path: 'orders.products',
@@ -28,15 +32,13 @@ const resolvers = {
             }
       
             throw new AuthenticationError('Not logged in');
-          },
+        },
 
         // users: async () => {
         //     return User.find().populate('comments');
         //   },
 
-          user: async (parent, { username }) => {
-            return User.findOne({ username }).populate('comments');
-          },
+          
 
           // comments: async (parent, { username }) => {
           //   const params = username ? { username } : {};
@@ -98,7 +100,7 @@ const resolvers = {
           //   return await Product.findByIdAndUpdate(_id, { $inc: { stock: decrement } }, { new: true });
           // },
 
-          addToCart: async (parent, { products }, context) => {
+        addToCart: async (parent, { products }, context) => {
             console.log(context);
             if (context.user) {
               const order = new Order({ products });
@@ -109,9 +111,9 @@ const resolvers = {
             }
       
             throw new AuthenticationError('Not logged in');
-          },
+        },
 
-         removeFromCart: async (parent, { products }, context) => {
+        removeFromCart: async (parent, { products }, context) => {
           console.log(context);
           if (context.user) {
             const order = new Order({ products });
