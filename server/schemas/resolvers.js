@@ -30,29 +30,29 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
           },
 
-        users: async () => {
-            return User.find().populate('comments');
-          },
+        // users: async () => {
+        //     return User.find().populate('comments');
+        //   },
 
           user: async (parent, { username }) => {
             return User.findOne({ username }).populate('comments');
           },
 
-          comments: async (parent, { username }) => {
-            const params = username ? { username } : {};
-            return Comment.find(params).sort({ createdAt: 1 });
-          },
+          // comments: async (parent, { username }) => {
+          //   const params = username ? { username } : {};
+          //   return Comment.find(params).sort({ createdAt: 1 });
+          // },
 
-          comment: async (parent, { commentId }) => {
-            return Comment.findOne({ _id: commentId });
-          },
+          // comment: async (parent, { commentId }) => {
+          //   return Comment.findOne({ _id: commentId });
+          // },
 
-        me: async (parent, args, context) => {
-            if (context.user) {
-                return User.findOne({ _id: context.user._id }).populate('comments');
-            }
-            throw new AuthenticationError('You need to be logged in!');
-          },
+        // me: async (parent, args, context) => {
+        //     if (context.user) {
+        //         return User.findOne({ _id: context.user._id }).populate('comments');
+        //     }
+        //     throw new AuthenticationError('You need to be logged in!');
+        //   },
     },
 
     Mutation: {
@@ -79,17 +79,17 @@ const resolvers = {
             return { token, user };
         },
 
-        addComment: async (parent, { commentText }, context) => {
-            if (context.user) {
-              const comment = await Comment.create({
-                commentText,
-                commentAuthor: context.user.username,
-              });
+        // addComment: async (parent, { commentText }, context) => {
+        //     if (context.user) {
+        //       const comment = await Comment.create({
+        //         commentText,
+        //         commentAuthor: context.user.username,
+        //       });
             
-              return comment;
-            }
-            throw new AuthenticationError('You need to be logged in!');
-          },
+        //       return comment;
+        //     }
+        //     throw new AuthenticationError('You need to be logged in!');
+        //   },
 
           
           // updateProduct: async (parent, { _id, stock }) => {
@@ -124,7 +124,6 @@ const resolvers = {
           throw new AuthenticationError('Not logged in');
         },
 
-          ////// checkout: async ()
     }
 }
 
