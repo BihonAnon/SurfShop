@@ -9,7 +9,6 @@ function Cart() {
   const handleShow = () => setShow(true);
 
 
-
   return (
     <>
       <Button variant="info" onClick={handleShow}>

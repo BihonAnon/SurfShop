@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
+import Cart from '../Cart';
 
+const AddToCart =({ product_prop }) =>{
+  console.log(product_prop)
+}
 const ProductList = ({ products, title }) => {
   if (!products.length) {
     return <h3> No Products Yet, Check Back Soon</h3>
