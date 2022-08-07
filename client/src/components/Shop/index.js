@@ -6,7 +6,7 @@ import HeaderOther from '../HeaderOther';
 //import the query we are executing
 import { QUERY_PRODUCTS } from '../../utils/queries'
 import ProductList from '../Product'
-
+import Cart from '../Cart'
 //Shows 9 products on the page?
 const Shop = () => {
   // Execute The Query on Component Load
@@ -16,6 +16,7 @@ const Shop = () => {
   return(
     <div>
       <HeaderOther />
+      <Cart />
       {loading ? (
         <div>Loading...</div>
       ) : (

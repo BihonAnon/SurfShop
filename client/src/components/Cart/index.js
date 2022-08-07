@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function Example() {
+function Cart() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -21,12 +21,11 @@ function Example() {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        CART WILL GO HERE
         </Offcanvas.Body>
       </Offcanvas>
     </>
   );
 }
 
-render(<Example />);
+export default Cart;
