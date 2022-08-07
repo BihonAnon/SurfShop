@@ -25,7 +25,7 @@ const ProductList = ({ products, title }) => {
                   <br />
                   Quantity:{product_prop.stock}
                 </Card.Text>
-                <Button variant="primary" onClick={addToCart(product_prop)}>${product_prop.price}<br />Add to Cart</Button>
+                <Button variant="primary">${product_prop.price}<br />Add to Cart</Button>
               </Card.Body>
             </Card>
 
