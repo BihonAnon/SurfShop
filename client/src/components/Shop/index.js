@@ -7,6 +7,7 @@ import HeaderOther from '../HeaderOther';
 import { QUERY_PRODUCTS } from '../../utils/queries'
 import ProductList from '../Product'
 import Cart from '../Cart'
+
 //Shows 9 products on the page?
 const Shop = () => {
   // Execute The Query on Component Load

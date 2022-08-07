@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Button, ListGroup, Card } from 'react-bootstrap';
+import { Button, ListGroup, Card } from 'react-bootstrap';
 
 const ProductList = ({ products, title }) => {
   if (!products.length) {
@@ -11,12 +11,25 @@ const ProductList = ({ products, title }) => {
       {products &&
         products.map((product_prop) => (
           <div>
-            {product_prop.name}
-            {product_prop.image}
-            {product_prop.description}
-            {product_prop.category}
-            {product_prop.stock}
-            {product_prop.price}
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" img src={product_prop.image} style={{ width: '18rem' }} style={{ height: "16rem" }} />
+              <Card.Body>
+                <Card.Title><h2>{product_prop.name}</h2></Card.Title>
+                <Card.Text>
+                  {product_prop.description}
+                  {product_prop.category}
+                  {product_prop.stock}
+                </Card.Text>
+                <Button variant="primary">{product_prop.price}<br />Add to Cart</Button>
+              </Card.Body>
+            </Card>
+
+            
+            
+            
+            
+            
+            <br />
           </div>
         ))}
     </div>
