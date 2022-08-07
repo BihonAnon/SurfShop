@@ -11,8 +11,8 @@ function HeaderOther() {
         <Container>
           <Navbar.Brand className="navbar-brand" href="#home">Surf</Navbar.Brand>
           <Nav className="d-flex flex-row-reverse">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+            <Nav.Link as={Link} to={"/ourbrand"}>Brand</Nav.Link>
             <Nav.Link as={Link} to={"/shop"}>Shop</Nav.Link>
           </Nav>
         </Container>
