@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import HeaderOther from '../HeaderOther';
 //import the query we are executing
 import { QUERY_PRODUCTS } from '../../utils/queries'
+import Product from '../Product'
 
 //Shows 9 products on the page?
 const Shop = () => {
@@ -13,7 +14,12 @@ const Shop = () => {
   //Chaining Something?
   const products = data?.products || [];
   return(
-    <HeaderOther />
+    <div>
+      <HeaderOther />
+      <Product 
+        products={products}
+      /> 
+    </div>
   )
 };
 export default Shop;
