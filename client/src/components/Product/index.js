@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
+import Cart from '../Cart';
 
+const AddToCart =({ product_prop }) =>{
+  console.log(product_prop)
+}
 const ProductList = ({ products, title }) => {
   if (!products.length) {
     return <h3> No Products Yet, Check Back Soon</h3>
@@ -12,7 +16,7 @@ const ProductList = ({ products, title }) => {
         products.map((product_prop) => (
           <div className = {product_prop._id}>
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" img src={product_prop.image} style={{ width: '18rem' }} style={{ height: "16rem" }} />
+              <Card.Img variant="top" img src={product_prop.image} style={{ width: '18rem' }} />
               <Card.Body>
                 <Card.Title><h2>{product_prop.name}</h2></Card.Title>
                 <Card.Text>
@@ -21,7 +25,7 @@ const ProductList = ({ products, title }) => {
                   <br />
                   Quantity:{product_prop.stock}
                 </Card.Text>
-                <Button variant="primary">${product_prop.price}<br />Add to Cart</Button>
+                <Button variant="primary" onClick={addToCart(product_prop)}>${product_prop.price}<br />Add to Cart</Button>
               </Card.Body>
             </Card>
 
