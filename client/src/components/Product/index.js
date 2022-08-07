@@ -12,7 +12,7 @@ const ProductList = ({ products, title }) => {
         products.map((product_prop) => (
           <div className = {product_prop._id}>
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" img src={product_prop.image} style={{ width: '18rem' }} style={{ height: "16rem" }} />
+              <Card.Img variant="top" img src={product_prop.image} style={{ height: "16rem" }} />
               <Card.Body>
                 <Card.Title><h2>{product_prop.name}</h2></Card.Title>
                 <Card.Text>
