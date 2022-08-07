@@ -5,7 +5,11 @@ import towel from './images/colorful-towel.jpg';
 import fiberBoard from './images/fiberglassBoard.jpg';
 import foamBoard from './images/foamBoard.jpeg';
 import goldenWax from './images/goldenWax.webp';
-
+import catchSurfWax from './images/catchSurfWax.jpg';
+import bubbleGumWax from './images/bubbleGumWax.webp';
+import sunTowel from './images/sunTowel.webp';
+import leavesTowel from './images/leavesTowel.webp';
+import longBoardWood from './images/longBoardWood.jpeg';
 
 
 <Card style={{ width: '18rem' }}>
