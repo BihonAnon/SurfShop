@@ -1,24 +1,23 @@
+import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
 
-export default function Product({product_prop}) { //onclick={addProductItem}
+const ProductList = ({ products, name}) => {
+  if (!products.length) {
+    return <h3> No Products Yet, Check Back Soon</h3>
+  }
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-      <Card.Body>
-        <Card.Title>{product_prop.name}</Card.Title>
-        <Card.Text>
+      <div>
+        <h3>{name}</h3>
+        {products &&
+          products.map((product)=>(
+            <div>
         {product_prop.image}
         {product_prop.description}
-        </Card.Text>
-      </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>{product_prop.category}</ListGroup.Item>
-        <ListGroup.Item>{product_prop.stock}</ListGroup.Item>
-        <ListGroup.Item>{product_prop.price}</ListGroup.Item>
-      </ListGroup>
-      <Card.Body>
-        <Button  variant="dark">Dark</Button> <Button variant="link">Link</Button>
-      </Card.Body>
-    </Card>
-  );
-}
+        {product_prop.category}
+        {product_prop.stock}
+        {product_prop.price}
+            </div>
+        ))}
+      </div>
+  )
+};
