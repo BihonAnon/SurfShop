@@ -19,9 +19,9 @@ const ProductList = ({ products, title }) => {
                   {product_prop.description}
                   {product_prop.category}
                   <br />
-                  Quantity:{product_prop.stock}
+                  Quantity: {product_prop.stock}
                 </Card.Text>
-                <Button variant="primary">${product_prop.price}<br />Add to Cart</Button>
+                <Button variant="primary" onClick={product_prop._id}>${product_prop.price}<br />Add to Cart</Button>
               </Card.Body>
             </Card>
 
