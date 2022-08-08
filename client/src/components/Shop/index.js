@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //useQuery() from apollo client
 import { useQuery } from '@apollo/client';
 // import Product from '../Product';
-import HeaderOther from '../HeaderOther';
+import HeaderOther from '../Header';
 //import the query we are executing
 import { QUERY_PRODUCTS } from '../../utils/queries'
 import ProductList from '../Product'
