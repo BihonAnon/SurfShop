@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import CartList from '../CartList';
+import { QUERY_PRODUCT } from '../../utils/queries'
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
 
 function Cart() {
   const [show, setShow] = useState(false);
@@ -11,6 +15,8 @@ function Cart() {
   const cartArr = localStorage.getItem('cart');
   const cart = JSON.parse(cartArr);
   console.log(cart);
+
+
 
   return (
     <>
@@ -23,7 +29,10 @@ function Cart() {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        {cart}
+          <CartList
+            products={cart}
+            title="A Cart!"
+          />
         </Offcanvas.Body>
       </Offcanvas>
     </>

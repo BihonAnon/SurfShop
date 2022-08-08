@@ -13,11 +13,10 @@ const ProductList = ({ products, title }) => {
     localStorage.setItem("cart", JSON.stringify(arr));
   }
   return (
-    <div>
-      <h3>{title}</h3>
+    <div className='row row-cols-3'>
       {products &&
         products.map((product_prop) => (
-          <div className = {product_prop._id}>
+          <div className = 'col' id = {product_prop._id}>
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" img src={product_prop.image} style={{ height: "16rem" }} />
               <Card.Body>
