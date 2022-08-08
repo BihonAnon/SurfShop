@@ -19,7 +19,7 @@ function Cart() {
   const handleCartClear = () => {
     localStorage.setItem('cart', JSON.stringify('nocart'));
     console.log(localStorage.getItem('cart'))
-    handleClose(); //AWAIT??? BUG WHEN DONT OPEN AGAIN???
+    handleClose();
   }
 
   return (

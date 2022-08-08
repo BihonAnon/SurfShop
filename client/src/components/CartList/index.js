@@ -52,9 +52,11 @@ const ProductList = ({ products, title, cartFullState }) => {
   }
 
   const handleCheckOut = () => {
-    console.log('working?')
-    console.log(priceTotal);
+    console.log('working...')
+    console.log('Total ', priceTotal);
+    console.log('Products in Cart', filteredProducts)
   }
+
 const handleDeleteThis= event =>{
   console.log('deleted ', event.currentTarget.id)
 }
