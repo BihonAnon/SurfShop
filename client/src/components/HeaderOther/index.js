@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function HeaderOther() {
   return (
     <>
-      <Navbar className="fixme" bg="light" variant="light">
+      <Navbar className="nav fixed-bottom" bg="light" variant="light">
         <Container>
           <Navbar.Brand className="navbar-brand" href="#home">Surf</Navbar.Brand>
           <Nav className="d-flex flex-row-reverse">

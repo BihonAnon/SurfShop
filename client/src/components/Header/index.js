@@ -9,7 +9,7 @@ function ColorSchemesExample() {
     <>
       <Navbar className="nav fixed-bottom" bg="light" variant="light">
         <Container>
-          <Navbar.Brand className="navbar-brand" href="#home">Surf</Navbar.Brand>
+          <Navbar.Brand className="navbar-brand"   href="#home">Surf</Navbar.Brand>
           <Nav className="d-flex flex-row-reverse">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
