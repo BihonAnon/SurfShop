@@ -40,22 +40,22 @@ db.once('open', async () => {
   process.exit(0);
 });
 
-// db.once('open', async () => {
-//   try {
-//     await Product.deleteMany({});
-//     await User.deleteMany({});
-//     await Category.deleteMany({});
+db.once('open', async () => {
+  try {
+    await Product.deleteMany({});
+    await User.deleteMany({});
+    await Category.deleteMany({});
 
-//     // await Category.create(categorySeeds);
+    // await Category.create(categorySeeds);
 
-//     for (let i = 0; i < categorySeeds.length; i++) {
-//       await Category.create(categorySeeds[i]);
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     process.exit(1);
-//   }
+    for (let i = 0; i < categorySeeds.length; i++) {
+      await Category.create(categorySeeds[i]);
+    }
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
 
-//   console.log('all done!');
-//   process.exit(0);
-// });
+  console.log('all done!');
+  process.exit(0);
+});
