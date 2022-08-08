@@ -50,6 +50,7 @@ const ProductList = ({ products, title, cartFullState }) => {
   }
   const handleDeleteThis = event => {
     console.log('deleted ', event.currentTarget.id)
+    // Handle
   }
 
   const handleCheckOut = () => {

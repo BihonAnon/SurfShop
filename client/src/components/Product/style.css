@@ -1,4 +1,4 @@
-.card{
+.productCard{
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
@@ -7,8 +7,22 @@
   cursor: pointer;
 }
 
-.card:hover{
+.productCard:hover{
      transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(47, 235, 252, 0.692), 0 4px 8px rgba(28, 205, 214, 0.06);
 }
+/* .bg-blue {
+    background-image: 
+    url(
+  "../../assets/images/palmTrees.jpg");
+    background-size: "cover";
+} */
 
+.product-page {
+    background-image: 
+    url(
+  "../../assets/images/palmLeaves.jpg");
+    background-size: "cover";
+    background-attachment: fixed;
+    /* opacity: 0.5; */
+}
