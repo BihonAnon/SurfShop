@@ -4,7 +4,7 @@
     "description": "A wooden long board",
     "stock": "15",
     "price": "200.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "./images/longBoardWood.jpeg",
     "category": "62ed663c55370085250c8f97"
   },
   {
