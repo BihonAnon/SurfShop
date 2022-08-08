@@ -18,13 +18,14 @@ const ProductList = ({ products, title }) => {
     arr.push(cartProductId);
     localStorage.setItem("cart", JSON.stringify(arr));
   }
-  return (
+  return ( <div className="flex-column justify-center align-center min-100-vh product-page ">
+    <div className='container'>
     <div className='row row-cols-3'>
       {products &&
         products.map((product_prop) => (
           <div className = 'col' id = {product_prop._id}>
             <Card style={{ width: '18rem' }} className='productCard'>
-              <Card.Img variant="top"  img src={product_prop.image} style={{ height: "16rem" }} />
+              <Card.Img variant="top"  src={product_prop.image} style={{ height: "16rem" }} />
               <Card.Body >
                 <Card.Title><h2>{product_prop.name}</h2></Card.Title>
                 <Card.Text>
@@ -46,6 +47,8 @@ const ProductList = ({ products, title }) => {
             <br />
           </div>
         ))}
+    </div>
+    </div>
     </div>
   )
 };

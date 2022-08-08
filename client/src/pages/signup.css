@@ -1,0 +1,8 @@
+.test {
+    background-image: 
+    url(
+  "../assets/images/palmLeaves.jpg");
+    background-size: "cover";
+    background-attachment: fixed;
+    min-height: 100vh;
+}

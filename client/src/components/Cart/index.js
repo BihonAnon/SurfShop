@@ -5,7 +5,7 @@ import CartList from '../CartList';
 import { QUERY_PRODUCT } from '../../utils/queries'
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
-
+import './cart.css';
 function Cart() {
   const [show, setShow] = useState(false);
   const [cartFull, setCartFull] = useState(false);
@@ -24,7 +24,7 @@ function Cart() {
 
   return (
     <>
-      <Button variant="info" onClick={handleShow}>
+      <Button variant="info" onClick={handleShow} >
         Cart
       </Button>
 
