@@ -15,9 +15,11 @@ function Cart() {
   const cartArr = localStorage.getItem('cart');
   const cart = JSON.parse(cartArr);
   console.log(cart);
-
-
-
+  const handleCartClear = () => {
+    localStorage.setItem('cart', null);
+    console.log(localStorage.getItem('cart'))
+    console.log('did this pass?')
+  }
   return (
     <>
       <Button variant="info" onClick={handleShow}>
@@ -29,6 +31,9 @@ function Cart() {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
+        <Button variant="info" onClick={handleCartClear}>
+        ClearCart
+      </Button>
           <CartList
             products={cart}
             title="A Cart!"
