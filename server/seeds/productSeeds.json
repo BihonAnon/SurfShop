@@ -1,39 +1,35 @@
-
-
-
-
 [
   {
     "name": "Wooden Long Board",
     "description": "A wooden long board",
     "stock": "15",
     "price": "200.00",
-    "image": "./images/fiberglass",
-    "category": "62ed663c55370085250c8f97"
+    "image": "./images/longBoardWood.jpeg",
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Fiberglass Long Board",
     "description": "A Fiberglass long board",
     "stock": "20",
     "price": "400.00",
-    "image": "./images/fiberglass",
-    "category": "62ed663c55370085250c8f97"
+    "image": "https://www.fillmurray.com/400/400",
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Foamy Long Board",
     "description": "A Foamy long board",
     "stock": "200",
     "price": "100.00",
-    "image": "./image",
-    "category": "62ed663c55370085250c8f97"
+    "image": "https://www.fillmurray.com/400/400",
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Wooden Short Board",
     "description": "A wooden Short Board",
     "stock": "15",
     "price": "200.00",
-    "image": "https://images.app.goo.gl/rctQo9KRYR2Fntp6A",
-    "category": "62ed663c55370085250c8f97"
+    "image": "https://www.fillmurray.com/400/400",
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Fiberglass Short Board",
@@ -41,7 +37,7 @@
     "stock": "20",
     "price": "400.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f97"
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Foamy Short Board",
@@ -49,7 +45,7 @@
     "stock": "200",
     "price": "100.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f97"
+    "category": "62f14ab393c2242f16cce704"
   },
   {
     "name": "Cool Towel",
@@ -57,7 +53,7 @@
     "stock": "200",
     "price": "25.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f9b"
+    "category": "62f14ab393c2242f16cce709"
   },
   {
     "name": "Super Cool Towel",
@@ -65,7 +61,7 @@
     "stock": "100",
     "price": "35.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f9b"
+    "category": "62f14ab393c2242f16cce709"
   },
   {
     "name": "Wax",
@@ -73,7 +69,7 @@
     "stock": "100",
     "price": "8.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f99"
+    "category": "62f14ab393c2242f16cce707"
   },
   {
     "name": "Super Wax",
@@ -81,6 +77,6 @@
     "stock": "100",
     "price": "10.00",
     "image": "https://www.fillmurray.com/400/400",
-    "category": "62ed663c55370085250c8f99"
+    "category": "62f14ab393c2242f16cce707"
   }
 ]
