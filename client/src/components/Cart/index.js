@@ -41,7 +41,7 @@ function Cart() {
       </Button>
           <CartList
             products={cart}
-            title="A Cart!"
+            title="Items In Cart..."
           />
           <Button varient="danger" onClick={handleCheckOut}>Check out</Button>
         </Offcanvas.Body>
