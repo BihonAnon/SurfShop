@@ -16,8 +16,6 @@ function Cart() {
   const cart = JSON.parse(cartArr);
   console.log(cart);
 
-
-
   return (
     <>
       <Button variant="info" onClick={handleShow}>
