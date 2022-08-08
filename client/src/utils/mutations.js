@@ -51,19 +51,15 @@ export const ADD_TO_CART = gql`
 `;
 
 export const ADD_ORDER = gql`
-  mutation addOrder($priceTotal: Int, $products: [ID]) {
-    addToCart(priceTotal: $priceTotal, products: $products) {
+mutation addOrder($priceTotal: Int, $products: [ID]) {
+  addOrder(priceTotal: $priceTotal, products: $products) {
+    username
+    orders {
       purchaseDate
       products {
-        _id
         name
-        description
-        price
-        quantity
-        category {
-          name
-        }
       }
     }
   }
+}
 `;
