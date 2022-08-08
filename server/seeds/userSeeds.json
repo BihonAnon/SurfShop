@@ -1,22 +1,16 @@
 [
     {
         "username": "al123",
-        "firstName": "Alan",
-        "lastName": "A",
         "email": "alan@test.com",
         "password": "password123"
     },
     {
         "username": "joe123",
-        "firstName": "Joe",
-        "lastName": "J",
         "email": "joe@test.com",
         "password": "password1234"
     },
     {
         "username": "frank123",
-        "firstName": "Frank",
-        "lastName": "F",
         "email": "frank@test.com",
         "password": "password12345"
     }
