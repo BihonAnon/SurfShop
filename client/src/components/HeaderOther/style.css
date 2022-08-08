@@ -1,8 +1,0 @@
-.fixme {
-  position: -webkit-sticky; /* Safari & IE */
-  position: fixed!important;
-  bottom: 0;
-}
-.navbar-brand {
-  font-family: Montserrat Subrayada;
-}

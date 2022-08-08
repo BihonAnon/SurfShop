@@ -1,10 +1,14 @@
+import React from 'react';
+import  woodenBoard from '../../client/src/assets/images/longBoardWood.jpeg';
+
+
 [
   {
     "name": "Wooden Long Board",
     "description": "A wooden long board",
     "stock": "15",
     "price": "200.00",
-    "image": "./images/longBoardWood.jpeg",
+    "image": woodenBoard,
     "category": "62ed663c55370085250c8f97"
   },
   {
@@ -12,7 +16,7 @@
     "description": "A Fiberglass long board",
     "stock": "20",
     "price": "400.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "./images/fiberglass",
     "category": "62ed663c55370085250c8f97"
   },
   {
@@ -20,7 +24,7 @@
     "description": "A Foamy long board",
     "stock": "200",
     "price": "100.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "./image",
     "category": "62ed663c55370085250c8f97"
   },
   {
@@ -28,7 +32,7 @@
     "description": "A wooden Short Board",
     "stock": "15",
     "price": "200.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://images.app.goo.gl/rctQo9KRYR2Fntp6A",
     "category": "62ed663c55370085250c8f97"
   },
   {

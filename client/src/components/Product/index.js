@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
 import Cart from '../Cart';
+import './style.css';
+
 
 const AddToCart =({ product_prop }) =>{
   console.log(product_prop)
