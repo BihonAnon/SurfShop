@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
+import Cart from '../Cart';
 
+const AddToCart =({ product_prop }) =>{
+  console.log(product_prop)
+}
 const ProductList = ({ products, title }) => {
   if (!products.length) {
     return <h3> No Products Yet, Check Back Soon</h3>
@@ -29,6 +33,7 @@ const ProductList = ({ products, title }) => {
                   Quantity: {product_prop.stock}
                 </Card.Text>
                 <Button variant="primary" id={product_prop._id} onClick={handleClick}>${product_prop.price}<br />Add to Cart</Button>
+
               </Card.Body>
             </Card>
 
