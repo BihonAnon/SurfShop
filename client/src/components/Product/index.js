@@ -9,6 +9,13 @@ const ProductList = ({ products, title }) => {
   if (!products.length) {
     return <h3> No Products Yet, Check Back Soon</h3>
   }
+  const arr = [];
+  const handleClick = event => {
+    var cartProductId = event.currentTarget.id;
+    console.log('PRODUCT ID 👉️', cartProductId);
+    arr.push(cartProductId);
+    localStorage.setItem("cart", JSON.stringify(arr));
+  }
   return (
     <div>
       <h3>{title}</h3>
@@ -25,9 +32,7 @@ const ProductList = ({ products, title }) => {
                   <br />
                   Quantity: {product_prop.stock}
                 </Card.Text>
-
-                <Button variant="primary">${product_prop.price}<br />Add to Cart</Button>
-
+                <Button variant="primary" id={product_prop._id} onClick={handleClick}>${product_prop.price}<br />Add to Cart</Button>
 
               </Card.Body>
             </Card>

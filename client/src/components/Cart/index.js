@@ -8,6 +8,10 @@ function Cart() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const cartArr = localStorage.getItem('cart');
+  const cart = JSON.parse(cartArr);
+  console.log(cart);
+
 
   return (
     <>
@@ -20,7 +24,7 @@ function Cart() {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        CART WILL GO HERE
+        {cart}
         </Offcanvas.Body>
       </Offcanvas>
     </>
