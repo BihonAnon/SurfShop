@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactDOM } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import CartList from '../CartList';
@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 
 function Cart() {
   const [show, setShow] = useState(false);
-
+  const [cartFull, setCartFull] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -17,14 +17,11 @@ function Cart() {
   console.log(cart);
 
   const handleCartClear = () => {
-    localStorage.setItem('cart', null);
+    localStorage.setItem('cart', JSON.stringify('nocart'));
     console.log(localStorage.getItem('cart'))
     handleClose(); //AWAIT??? BUG WHEN DONT OPEN AGAIN???
   }
 
-  const handleCheckOut = () => {
-    console.log('working?')
-  }
   return (
     <>
       <Button variant="info" onClick={handleShow}>
@@ -33,17 +30,19 @@ function Cart() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Your Cart</Offcanvas.Title>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <Button variant="info" onClick={handleCartClear}>
-        ClearCart
-      </Button>
           <CartList
             products={cart}
             title="Items In Cart..."
+            cartFullState={cartFull}
           />
-          <Button varient="danger" onClick={handleCheckOut}>Check out</Button>
+        </Offcanvas.Body>
+        <Offcanvas.Body>
+          <Button variant="info" onClick={handleCartClear}>
+            ClearCart
+          </Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
