@@ -15,10 +15,15 @@ function Cart() {
   const cartArr = localStorage.getItem('cart');
   const cart = JSON.parse(cartArr);
   console.log(cart);
+
   const handleCartClear = () => {
     localStorage.setItem('cart', null);
     console.log(localStorage.getItem('cart'))
-    console.log('did this pass?')
+    handleClose(); //AWAIT??? BUG WHEN DONT OPEN AGAIN???
+  }
+
+  const handleCheckOut = () => {
+    console.log('working?')
   }
   return (
     <>
@@ -38,6 +43,7 @@ function Cart() {
             products={cart}
             title="A Cart!"
           />
+          <Button varient="danger" onClick={handleCheckOut}>Check out</Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
