@@ -28,9 +28,9 @@ db.once('open', async () => {
 
     await User.create(userSeeds);
 
-    for (let i = 0; i < userSeeds.length; i++) {
-      await User.create(userSeeds[i]);
-    }
+    // for (let i = 0; i < userSeeds.length; i++) {
+    //   await User.create(userSeeds[i]);
+    // }
   } catch (err) {
     console.error(err);
     process.exit(1);
