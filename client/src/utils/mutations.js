@@ -50,4 +50,20 @@ export const ADD_TO_CART = gql`
   }
 `;
 
-//add remove from cart
+export const ADD_ORDER = gql`
+  mutation addOrder($priceTotal: Int, $products: [ID]) {
+    addToCart(priceTotal: $priceTotal, products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
+        description
+        price
+        quantity
+        category {
+          name
+        }
+      }
+    }
+  }
+`;
