@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
 
 const ProductList = ({ products, title }) => {
-
+   
   
   const arr = [];
   const handleClick = event => {

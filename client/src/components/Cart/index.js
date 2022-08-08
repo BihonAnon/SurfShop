@@ -16,6 +16,15 @@ function Cart() {
   const cart = JSON.parse(cartArr);
   console.log(cart);
 
+  const handleCartClear = () => {
+    localStorage.setItem('cart', null);
+    console.log(localStorage.getItem('cart'))
+    handleClose(); //AWAIT??? BUG WHEN DONT OPEN AGAIN???
+  }
+
+  const handleCheckOut = () => {
+    console.log('working?')
+  }
   return (
     <>
       <Button variant="info" onClick={handleShow}>
@@ -27,10 +36,14 @@ function Cart() {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
+        <Button variant="info" onClick={handleCartClear}>
+        ClearCart
+      </Button>
           <CartList
             products={cart}
-            title="A Cart!"
+            title="Items In Cart..."
           />
+          <Button varient="danger" onClick={handleCheckOut}>Check out</Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
