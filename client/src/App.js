@@ -7,10 +7,13 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
 import Header from './components/Header'
 import Home from './components/Home'
-import Login from './components/Login'
+import Login from './pages/Login'
 import Shop from './components/Shop'
+import Signup from './pages/Signup';
+
 import Comments from './components/CommentList'
 
 // import Footer from './components/Footer'
@@ -59,6 +62,10 @@ export default function App() {
               <Route
                 path="/login"
                 element={<Login />}
+              />
+              <Route 
+                path="/signup" 
+                element={<Signup />} 
               />
               <Route
                 path="/shop"
