@@ -4,7 +4,7 @@
     "description": "A wooden long board",
     "stock": "15",
     "price": "200.00",
-    "image": "./images/longBoardWood.jpeg",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994553/surf/surfboard_xez8gi.jpg",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -12,7 +12,7 @@
     "description": "A Fiberglass long board",
     "stock": "20",
     "price": "400.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994581/surf/fiberglassBoard_wlabx6.jpg",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -20,7 +20,7 @@
     "description": "A Foamy long board",
     "stock": "200",
     "price": "100.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994581/surf/foamBoard_psasig.jpg",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -28,7 +28,7 @@
     "description": "A wooden Short Board",
     "stock": "15",
     "price": "200.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994553/surf/longBoardWood_pvht4i.jpg",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -36,7 +36,7 @@
     "description": "A Fiberglass Short Board",
     "stock": "20",
     "price": "400.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659995444/surf/fiberGlassShort_lbthbq.webp",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -44,7 +44,7 @@
     "description": "A Foamy Short Board",
     "stock": "200",
     "price": "100.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659995353/surf/shortFoamBoard_caig7o.jpg",
     "category": "62f14ab393c2242f16cce704"
   },
   {
@@ -52,7 +52,7 @@
     "description": "A Cool Towel",
     "stock": "200",
     "price": "25.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994582/surf/colorful-towel_dcu3pq.jpg",
     "category": "62f14ab393c2242f16cce709"
   },
   {
@@ -60,7 +60,7 @@
     "description": "A Super Cool Towel",
     "stock": "100",
     "price": "35.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994553/surf/leavesTowel_fouwr6.webp",
     "category": "62f14ab393c2242f16cce709"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Some Wax for your board",
     "stock": "100",
     "price": "8.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994582/surf/catchSurfWax_emqumk.jpg",
     "category": "62f14ab393c2242f16cce707"
   },
   {
@@ -76,7 +76,7 @@
     "description": "Some Super Wax for your board",
     "stock": "100",
     "price": "10.00",
-    "image": "https://www.fillmurray.com/400/400",
+    "image": "https://res.cloudinary.com/dhhu9vsnn/image/upload/v1659994581/surf/bubbleGumWax_kuqhy9.webp",
     "category": "62f14ab393c2242f16cce707"
   }
 ]
