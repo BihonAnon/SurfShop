@@ -13,6 +13,7 @@ import Login from './components/Login'
 import Shop from './components/Shop'
 // import Footer from './components/Footer'
 
+let myCart = [];
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
