@@ -50,4 +50,3 @@ export const ADD_TO_CART = gql`
   }
 `;
 
-//add remove from cart

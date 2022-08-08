@@ -1,11 +1,11 @@
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import React, { useEffect, useState } from 'react';
 import { Button, ListGroup, Card } from 'react-bootstrap';
-import { QUERY_PRODUCTS } from '../../utils/queries'
+import { QUERY_PRODUCTS, ADD_ORDER } from '../../utils/queries'
 
 const ProductList = ({ products, title, cartFullState }) => {
-  const [priceTotal, setPriceTotal] = useState()
-  const [filteredProducts, setFilteredProducts] = useState([])
+  const [priceTotal, setPriceTotal] = useState();
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   const { loading, data } = useQuery(QUERY_PRODUCTS)
   const dbproducts = data?.products || []
@@ -38,8 +38,6 @@ const ProductList = ({ products, title, cartFullState }) => {
       console.log(theGrandTotal);
       setPriceTotal(theGrandTotal);
     }
-    console.log(theGrandTotal)
-
   }, [filteredProducts])
 
   const arr = [];
@@ -50,16 +48,37 @@ const ProductList = ({ products, title, cartFullState }) => {
     arr.push(cartProductId);
     localStorage.setItem("cart", JSON.stringify(arr));
   }
-
-  const handleCheckOut = () => {
-    console.log('working...')
-    console.log('Total ', priceTotal);
-    console.log('Products in Cart', filteredProducts)
+  const handleDeleteThis = event => {
+    console.log('deleted ', event.currentTarget.id)
   }
 
-const handleDeleteThis= event =>{
-  console.log('deleted ', event.currentTarget.id)
-}
+  const handleCheckOut = () => {
+    console.log('working...');
+    console.log('Date ');
+    console.log('Total ', priceTotal);
+    console.log('Products in Cart', filteredProducts)
+    // handleOrderSubmit();
+  }
+
+  // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
+  const [addOrder, { error }] = useMutation(ADD_ORDER);
+
+  const handleOrderSubmit = async (event) => {
+    event.preventDefault();
+
+    // Since mutation function is async, wrap in a `try...catch` to catch any network errors from throwing due to a failed request.
+    try {
+      // Execute mutation and pass in defined parameter data as variables
+      const { data } = await addOrder({
+        variables: { priceTotal, products },
+      });
+
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };  
+
   return (
     <div>
       <h3>{title}</h3>
@@ -79,5 +98,4 @@ const handleDeleteThis= event =>{
     </div>
   )
 };
-
 export default ProductList
