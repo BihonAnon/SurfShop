@@ -13,6 +13,9 @@ import Home from './components/Home'
 import Login from './pages/Login'
 import Shop from './components/Shop'
 import Signup from './pages/Signup';
+
+import Comments from './components/CommentList'
+
 // import Footer from './components/Footer'
 
 let myCart = [];
@@ -51,6 +54,10 @@ export default function App() {
               <Route
                 path="/header"
                 element={<Header />}
+              />
+              <Route
+                path="/comments"
+                element={<Comments />}
               />
               <Route
                 path="/login"
