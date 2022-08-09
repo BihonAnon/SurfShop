@@ -5,6 +5,8 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -40,7 +42,8 @@ const Login = (props) => {
     });
   };
 
-  return (
+  return (<div className="flex-column justify-center align-center min-100-vh test">
+  <div className='container'>
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
@@ -88,6 +91,8 @@ const Login = (props) => {
         </div>
       </div>
     </main>
+    </div>
+    </div>
   );
 };
 
