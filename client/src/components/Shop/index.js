@@ -15,7 +15,7 @@ const Shop = () => {
   //Chaining Something?
   const products = data?.products || [];
   return(
-    <div >
+    <div className='container'>
       <Cart />
       <HeaderOther />
       {loading ? (
