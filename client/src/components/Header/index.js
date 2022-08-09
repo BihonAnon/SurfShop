@@ -3,8 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './style.css';
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
+
 
 function ColorSchemesExample() {
+
   return (
     <>
       <Navbar className="nav fixed-bottom" bg="light" variant="light">
@@ -13,7 +16,11 @@ function ColorSchemesExample() {
           <Nav className="d-flex flex-row-reverse">
             <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
             <Nav.Link as={Link} to={"/shop"}>Shop</Nav.Link>
-            <Nav.Link as={Link} to={"/login"}>Login</Nav.Link>
+            {Auth.loggedIn()?(
+              <Nav.Link as={Link} to={"/logout"}>Logout</Nav.Link>
+            ) : (
+              <Nav.Link as={Link} to={"/login"}>Login</Nav.Link>
+            )}
             <Nav.Link as={Link} to={"/signup"}>Signup</Nav.Link>
           </Nav>
         </Container>
