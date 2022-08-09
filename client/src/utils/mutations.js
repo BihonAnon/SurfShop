@@ -50,4 +50,16 @@ export const ADD_TO_CART = gql`
   }
 `;
 
-//add remove from cart
+export const ADD_ORDER = gql`
+mutation addOrder($priceTotal: Int, $products: [ID]) {
+  addOrder(priceTotal: $priceTotal, products: $products) {
+    username
+    orders {
+      purchaseDate
+      products {
+        name
+      }
+    }
+  }
+}
+`;

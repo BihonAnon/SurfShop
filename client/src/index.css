@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 
+/* .product-page {
+    background-image: 
+    url(
+  "../src/assets/images/palmLeaves.jpg");
+    background-size: "cover";
+} */
+
 .customHeader {
   height: 200vh;
 }

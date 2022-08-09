@@ -39,22 +39,22 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
-  const [showItem, setShowItem] = useState(false)
-  return (
-    <div className="App">
-      <h1>Surf</h1>
-      {showItem ? <StripeContainer/> : <> <h3>#10.00</h3> <img src="" alt="" />
-      <button onClick={() => setShowitem(true)}>Purchase</button></>}
-    </div>
-  );
-}
+// function payment() {
+//   const [showItem, setShowItem] = useState(false)
+//   return (
+//     <div className="App">
+//       <h1>Surf</h1>
+//       {showItem ? <StripeContainer/> : <> <h3>#10.00</h3> <img src="" alt="" />
+//       <button onClick={() => setShowitem(true)}>Purchase</button></>}
+//     </div>
+//   );
+// }
 
 export default function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+       
           <div>
             <Routes>
               <Route
@@ -84,7 +84,7 @@ export default function App() {
               />
             </Routes>
           </div>
-        </div>
+       
       </Router>
     </ApolloProvider>
   )
