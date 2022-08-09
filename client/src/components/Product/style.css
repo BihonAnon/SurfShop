@@ -22,7 +22,7 @@
     /* background-image: 
     url(
   "../../assets/images/palmLeaves.jpg"); */
-    background-size: cover;
+    background-size: "cover";
     background-attachment: fixed;
     position: relative; 
     
