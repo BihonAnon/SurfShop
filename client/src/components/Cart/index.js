@@ -24,7 +24,7 @@ function Cart() {
 
   return (
     <>
-      <Button variant="info" nameClass="cartButton" onClick={handleShow} >
+      <Button variant="info"   onClick={handleShow} >
       🛒
       </Button>
 

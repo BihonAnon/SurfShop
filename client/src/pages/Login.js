@@ -40,7 +40,8 @@ const Login = (props) => {
     });
   };
 
-  return (
+  return (<div className="flex-column justify-center align-center min-100-vh test">
+  <div className='container'>
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
@@ -88,6 +89,8 @@ const Login = (props) => {
         </div>
       </div>
     </main>
+    </div>
+    </div>
   );
 };
 
